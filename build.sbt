@@ -1,4 +1,4 @@
-val scala3Version = "3.1.3-RC5"
+val scala3Version = "3.1.3"
 
 inThisBuild(
   List(
@@ -13,7 +13,6 @@ lazy val root = project
     version := "0.1.0-SNAPSHOT",
 
     scalaVersion := scala3Version,
+    scalacOptions += "-Xcheck-macros",
 
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
-    libraryDependencies += "com.github.rssh" %% "dotty-cps-async" % "0.9.9"
   )

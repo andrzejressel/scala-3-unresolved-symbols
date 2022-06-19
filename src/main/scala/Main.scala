@@ -1,14 +1,7 @@
-import scala.concurrent.{Future}
-import cps.monads.FutureAsyncMonad
-import cps.monads.FutureAsyncMonadAPI
-import cps.async
-import scala.concurrent.ExecutionContext
+package x
 
-def hello: Future[?] = {
-
-  given ExecutionContext = ExecutionContext.global
-
-  async {
+def hello = {
+  xtransform {
     val a: Seq[Generic[?]] = null
     a
       .foreach { to =>
